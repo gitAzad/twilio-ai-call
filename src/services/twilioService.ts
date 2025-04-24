@@ -48,13 +48,10 @@ export const generateTwiMLForQuestion = (
       method: 'POST',
       speechTimeout: 'auto',
       speechModel: 'phone_call',
-      language: 'en-US',
+      language: 'en-IN',
     });
 
-    gather.say(
-      { voice: 'Polly.Joanna' },
-      'Please speak your answer after the tone.'
-    );
+    gather.say({ voice: 'Polly.Joanna' }, 'Please speak your answer.');
 
     // If no input is received, retry
     twiml.redirect(
